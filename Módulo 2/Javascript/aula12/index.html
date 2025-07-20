@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #231b3f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let modo = prompt("Digite um modo: dark, red ou blue:");
+        switch (modo) {
+            case "dark":
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                break;
+            case "red":
+                document.body.style.backgroundColor = "red";
+                document.body.style.color = "white";
+                break;
+            case "blue":
+                document.body.style.backgroundColor = "blue";
+                document.body.style.color = "white";
+                break;
+            default:
+                document.body.style.backgroundColor = "#231b3f";
+                document.body.style.color = "black";
+        }
+    </script>
+</body>
+</html>
