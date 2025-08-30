@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API IBGE</title>
+</head>
+<body>
+    <form action="dados.json" method="post">
+        <label for="iregioes">Região: </label>
+        <select name="regioes" id="iregioes" onchange="buscarEstados()"></select>
+        <br><br>
+        <label for="iestados">Estado: </label>
+        <select name="estados" id="iestados" onchange="buscarMunicipios()"></select>
+        <br><br>
+        <label for="imunicipios">Municípios: </label>
+        <select name="municipios" id="imunicipios"></select>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

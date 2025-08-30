@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto JS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close_small" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <input type="text" name="busca" id="ibusca" placeholder="Pesquisar por títulos">
+    </header>
+    <main>
+        <section id="tarefas">
+            <h2>Tarefas <button onclick="novaTarefa()">Nova tarefa</button></h2>
+            <br>
+            <!-- <h6>Nenhuma tarefa registrada</h6> -->
+             <ul>
+                <li>
+                    <h5>Título de tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti iste quo nihil laborum itaque pariatur officiis molestiae quaerat facilis, cumque odit fugit a, hic fuga nam quos! Tempora, sit.</p>
+                    <div class="actions"><span class="material-symbols-outlined">delete</span></div>
+                </li>
+                <li>
+                    <h5>Título de tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti iste quo nihil laborum itaque pariatur officiis molestiae quaerat facilis, cumque odit fugit a, hic fuga nam quos! Tempora, sit.</p>
+                </li>
+                <li>
+                    <h5>Título de tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti iste quo nihil laborum itaque pariatur officiis molestiae quaerat facilis, cumque odit fugit a, hic fuga nam quos! Tempora, sit.</p>
+                </li>
+                <li>
+                    <h5>Título de tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti iste quo nihil laborum itaque pariatur officiis molestiae quaerat facilis, cumque odit fugit a, hic fuga nam quos! Tempora, sit.</p>
+                </li>
+                <li>
+                    <h5>Título de tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti iste quo nihil laborum itaque pariatur officiis molestiae quaerat facilis, cumque odit fugit a, hic fuga nam quos! Tempora, sit.</p>
+                </li>
+             </ul>
+        </section>
+        <section id="overlay" onclick="fecharModal()"></section>
+        <div id="criarTarefa" class="modal">
+            <form action="">
+                <h3>Criar Tarefa <span class="material-symbols-outlined" onclick="fecharModal()">close_small</span></h3>
+                
+                <label for="ititulo">Título</label>
+                <input type="text" name="titulo" id="ititulo">
+                <label for="idescricao">Descrição</label>
+                <textarea name="descricao" id="idescricao"></textarea>
+                <button>Criar</button>
+            </form>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
