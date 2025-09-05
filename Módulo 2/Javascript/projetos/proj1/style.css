@@ -17,13 +17,15 @@ body{
 }
 header{
     background-color: cornflowerblue;
-    padding: 16px 120px;
+    padding: 16px 0px;
+    display: flex;
+    justify-content: center;
 }
 header input{
     font-size: 20px;
-
     border-radius: 8px;
-    width: 100%;
+    width: 90%;
+    max-width: 1920px;
     height: 60px;
     padding: 0 10px;
 }
@@ -34,19 +36,28 @@ main{
 main > section#tarefas{
     padding: 60px 120px;
 }
-main > section#tarefas h2{
-    font-size: 48px;
-
+main > section#tarefas > div.tituloTarefa{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
-main > section#tarefas h2 button{
+@media only screen and (max-width:600px){
+    main > section#tarefas > div.tituloTarefa{
+        display: flex;
+        flex-direction: column;
+    }
+    main > section#tarefas > div.tituloTarefa h2{
+        text-align: center;
+    }
+}
+main > section#tarefas > div.tituloTarefa h2{
+    font-size: 48px;
+}
+main > section#tarefas > div.tituloTarefa button{
     font-size: 12px;
-    font-weight: bold;
+    font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: .75px;
-    color: black;
+    color: rgb(235, 235, 235);
 
     height: 46px;
     padding: 0 26px;
@@ -56,7 +67,7 @@ main > section#tarefas h2 button{
     cursor: pointer;
     transition: all 0.5s;
 }
-main > section#tarefas h2 button:hover{
+main > section#tarefas > div.tituloTarefa button:hover{
     background-color: rgb(66, 114, 202);
 }
 main > section#tarefas h6{
@@ -75,6 +86,22 @@ main > section#tarefas ul > li{
     background-color: white;
     border-radius: 8px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.12);
+    display: initial;
+}
+@media only screen and (max-width: 1020px){
+    main > section#tarefas ul > li{
+        width: calc(50% - 12px);
+        padding: 16px 10px;
+    }
+}
+@media only screen and (max-width: 690px){
+    main > section#tarefas ul > li{
+        width: calc(100% - 12px);
+        padding: 16px;
+    }
+}
+main > section#tarefas ul li.oculto{
+    display: none;
 }
 main > section#tarefas ul > li h5{
     font-size: 16px;
@@ -142,10 +169,10 @@ main > div.modal > form h3{
     justify-content: space-between;
     align-items: center;
 }
-main > div.modal > form > h3 span.material-symbols-outlined{
+main > div.modal > form > h3 i{
     cursor: pointer;
     border-radius: 50%;
-    border: 1px solid #999;
+    border: 2px solid #999;
     transform: translateY(-2px);
     font-variation-settings:
         'FILL' 1,
