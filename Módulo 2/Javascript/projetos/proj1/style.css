@@ -45,7 +45,7 @@ main > section#tarefas > div.tituloTarefa{
         display: flex;
         flex-direction: column;
     }
-    main > section#tarefas > div.tituloTarefa h2{
+    main > section#tarefas > div.tituloTarefa > h2{
         text-align: center;
     }
 }
@@ -65,10 +65,10 @@ main > section#tarefas > div.tituloTarefa button{
     border: 1.5px solid black;
     background-color: cornflowerblue;
     cursor: pointer;
-    transition: all 0.5s;
 }
-main > section#tarefas > div.tituloTarefa button:hover{
+main > section#tarefas > div.tituloTarefa button:active{
     background-color: rgb(66, 114, 202);
+    transform: scale(97%);
 }
 main > section#tarefas h6{
     text-align: center;
