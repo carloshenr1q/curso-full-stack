@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Header = () => {
+function Header () {
     return (
         <header>
-            <h1>Meu Header</h1>
+            <h1>Meu Header!</h1>
         </header>
     );
 };
